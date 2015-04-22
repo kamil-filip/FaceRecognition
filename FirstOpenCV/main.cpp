@@ -152,6 +152,26 @@ void main()
 
 	
 
+	string fn_haar = "E:\\lena.png";
+	string fn_csv = "E:\\lena.png";
+	int deviceId = 4;
+
+	vector<Mat> images;
+	vector<int> labels;
+
+	try
+	{
+		read_csv(fn_csv,images,labels);
+	}catch(cv::Exception &e)
+	{
+		cerr<<"Error opening file \"" <<fn_csv <<"\". Reason: "<<e.msg<<endl;
+		exit(1);
+	}
+
+	int im_width = images[0].cols;
+	int im_height = images[0].rows;
+
+
 
 }
 
